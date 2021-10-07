@@ -26,7 +26,7 @@ def merge(path: str) -> str:
                 df_file = pd.DataFrame([data_file])
                 df = pd.concat([df, df_file])
 
-    return df.to_csv("merge_json.csv", index=False)
+    return df.to_csv(os.path.join("data", "merge_json.csv"), index=False)
 
 
 if __name__ == "__main__":
